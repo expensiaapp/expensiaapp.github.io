@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Expensia - Track your expenses effortlessly. Simple, beautiful expense tracking with categories, recurring expenses, and cloud sync.">
+    <title>Expensia - Personal Expense Tracker</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="resources/icons/android-chrome-512x512.png">
+    <link rel="manifest" href="resources/icons/site.webmanifest">
+    <meta name="theme-color" content="#1E3A5F">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Expensia</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-translate="nav.home">Home</a></li>
+                <li><a href="#features" data-translate="nav.features">Features</a></li>
+                <li><a href="#showcase" data-translate="nav.showcase">Showcase</a></li>
+                <li><a href="#about" data-translate="nav.about">About</a></li>
+                <li class="language-switcher">
+                    <select id="languageSelect" aria-label="Language selector">
+                        <option value="en">English</option>
+                        <option value="tr">Türkçe</option>
+                    </select>
+                </li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-translate="hero.badge">✨ Simple Expense Tracking</div>
+                <h1 class="hero-title" data-translate="hero.title">Track Your Expenses Effortlessly</h1>
+                <p class="hero-subtitle" data-translate="hero.subtitle">Expensia helps you manage your finances with an intuitive interface. Track expenses, categorize spending, and gain insights into your financial habits.</p>
+                <div class="hero-buttons">
+                    <a href="https://apps.apple.com/app/id6756816856" id="appStoreLink" class="btn btn-appstore"
+                        aria-label="Download on the App Store">
+                        <img src="resources/icons/en/appstore.svg" alt="Download on the App Store" id="appStoreIcon">
+                    </a>
+                    <a href="#features" class="btn btn-secondary" data-translate="hero.learnMore">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <img src="resources/icons/app-icon.png" alt="Expensia" class="hero-app-icon"
+                        onerror="this.style.display='none';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Features</span>
+                <h2 class="section-title" data-translate="features.title">Powerful Features</h2>
+                <p class="section-subtitle" data-translate="features.subtitle">Everything you need to manage your expenses</p>
+            </div>
+            <div class="bento-grid">
+                <div class="bento-item">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-translate="features.expenseEntry.title">Quick Expense Entry</h3>
+                        <p class="feature-description" data-translate="features.expenseEntry.description">Add expenses in seconds with our intuitive interface. Enter amount, select category, and add notes effortlessly.
+                        </p>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+                                <path d="M2 17L12 22L22 17" />
+                                <path d="M2 12L12 17L22 12" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-translate="features.recurring.title">Recurring Expenses</h3>
+                        <p class="feature-description" data-translate="features.recurring.description">Set up recurring expenses for subscriptions, bills, and regular payments. Automatically generate expenses on schedule.</p>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-translate="features.dashboard.title">Dashboard Insights</h3>
+                        <p class="feature-description" data-translate="features.dashboard.description">View your spending at a glance with monthly totals, category breakdowns, and recent expense summaries.</p>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-translate="features.categories.title">Smart Categories</h3>
+                        <p class="feature-description" data-translate="features.categories.description">Organize expenses with 9 predefined categories including Food, Transport, Shopping, Entertainment, and more.</p>
+                    </div>
+                </div>
+
+                <div class="bento-item">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-translate="features.cloudSync.title">Cloud Sync</h3>
+                        <p class="feature-description" data-translate="features.cloudSync.description">Your expenses are safely synced to the cloud. Access your data from any device, anytime.</p>
+                    </div>
+                </div>
+                <div class="bento-item">
+                    <div class="bento-content">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title" data-translate="features.search.title">Search & Filter</h3>
+                        <p class="feature-description" data-translate="features.search.description">Quickly find expenses with powerful search and filter by category, date, or amount. Navigate your spending history effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="showcase">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">App Showcase</span>
+                <h2 class="section-title" data-translate="showcase.title">See Expensia in Action</h2>
+                <p class="section-subtitle" data-translate="showcase.subtitle">Discover how Expensia helps you manage your finances</p>
+            </div>
+            <div class="showcase-carousel">
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="resources/screenshots/screenshot-1.png" alt="Dashboard"
+                            class="showcase-screenshot"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="showcase-placeholder" style="display: none;">
+                            <div class="showcase-content-preview">
+                                <div class="preview-header"></div>
+                                <div class="preview-body">
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+                                    <div class="preview-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h3 data-translate="showcase.dashboard.title">Dashboard Overview</h3>
+                        <p data-translate="showcase.dashboard.description">View your spending summary with monthly totals, category breakdowns, and recent transactions at a glance</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="resources/screenshots/screenshot-2.png" alt="Expense List"
+                            class="showcase-screenshot"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="showcase-placeholder" style="display: none;">
+                            <div class="showcase-content-preview">
+                                <div class="preview-header"></div>
+                                <div class="preview-body">
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+                                    <div class="preview-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h3 data-translate="showcase.expenses.title">Expense List</h3>
+                        <p data-translate="showcase.expenses.description">Browse all your expenses with category filters and date grouping for easy navigation</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="resources/screenshots/screenshot-3.png" alt="Add Expense"
+                            class="showcase-screenshot"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="showcase-placeholder" style="display: none;">
+                            <div class="showcase-content-preview">
+                                <div class="preview-header"></div>
+                                <div class="preview-body">
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+                                    <div class="preview-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h3 data-translate="showcase.addExpense.title">Add Expense</h3>
+                        <p data-translate="showcase.addExpense.description">Quickly add one-time expenses with amount input, category selection, date picker, and optional notes</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="resources/screenshots/screenshot-4.png" alt="Add Recurring Expense"
+                            class="showcase-screenshot"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="showcase-placeholder" style="display: none;">
+                            <div class="showcase-content-preview">
+                                <div class="preview-header"></div>
+                                <div class="preview-body">
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+                                    <div class="preview-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h3 data-translate="showcase.addRecurring.title">Recurring Expenses</h3>
+                        <p data-translate="showcase.addRecurring.description">Set up recurring expenses with frequency options, start date, and optional end date for subscriptions and bills</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="resources/screenshots/screenshot-5.png" alt="Edit Expense"
+                            class="showcase-screenshot"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="showcase-placeholder" style="display: none;">
+                            <div class="showcase-content-preview">
+                                <div class="preview-header"></div>
+                                <div class="preview-body">
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+                                    <div class="preview-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h3 data-translate="showcase.editExpense.title">Edit Expense</h3>
+                        <p data-translate="showcase.editExpense.description">Update any expense details including amount, category, date, frequency, and active status</p>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="showcase-image">
+                        <img src="resources/screenshots/screenshot-6.png" alt="Search Expenses"
+                            class="showcase-screenshot"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="showcase-placeholder" style="display: none;">
+                            <div class="showcase-content-preview">
+                                <div class="preview-header"></div>
+                                <div class="preview-body">
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+                                    <div class="preview-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h3 data-translate="showcase.search.title">Search Expenses</h3>
+                        <p data-translate="showcase.search.description">Quickly find expenses using the search bar with real-time filtering by category and date</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="about" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-translate="about.title">About Expensia</h2>
+                <p class="cta-description" data-translate="about.description">Expensia is a personal expense tracking application designed to help you manage your finances effectively. With an intuitive interface, you can track expenses, categorize spending, set up recurring payments, and gain valuable insights into your financial habits.</p>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-translate="about.feature1">Simple expense tracking</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-translate="about.feature2">Recurring expenses</span>
+                    </div>
+                    <div class="cta-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span data-translate="about.feature3">Cloud sync & backup</span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="https://apps.apple.com/app/id6756816856" id="appStoreLink2" class="btn btn-appstore-large"
+                        aria-label="Download on the App Store">
+                        <img src="resources/icons/en/appstore.svg" alt="Download on the App Store" id="appStoreIcon2">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Expensia</h3>
+                    <p data-translate="footer.description">Expensia - Your personal expense tracker
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="content/en/privacy-policy.html" data-translate="footer.links.privacy"
+                                id="privacyLink">Privacy Policy</a></li>
+                        <li><a href="content/en/terms-of-service.html" data-translate="footer.links.terms"
+                                id="termsLink">Terms of Service</a></li>
+                        <li><a href="content/en/kvkk.html" id="kvkkLink">KVKK</a></li>
+                        <li><a href="mailto:admin.expensia@roxyapps.net"
+                                data-translate="footer.links.contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer.copyright">© 2025 Expensia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

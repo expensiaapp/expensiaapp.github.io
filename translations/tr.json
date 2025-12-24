@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "showcase": "Galeri",
+    "about": "Hakkında"
+  },
+  "hero": {
+    "badge": "✨ Basit Gider Takibi",
+    "title": "Giderlerinizi Zahmetsizce Takip Edin",
+    "subtitle": "Expensia, sezgisel arayüzü ile finanslarınızı yönetmenize yardımcı olur. Giderleri takip edin, harcamaları kategorilere ayırın ve finansal alışkanlıklarınız hakkında değerli bilgiler edinin.",
+    "cta": "Hemen Başla",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "features": {
+    "title": "Güçlü Özellikler",
+    "subtitle": "Giderlerinizi yönetmek için ihtiyacınız olan her şey",
+    "expenseEntry": {
+      "title": "Hızlı Gider Girişi",
+      "description": "Sezgisel arayüzümüzle saniyeler içinde gider ekleyin. Tutarı girin, kategori seçin ve notlar ekleyin."
+    },
+    "recurring": {
+      "title": "Tekrarlayan Giderler",
+      "description": "Abonelikler, faturalar ve düzenli ödemeler için tekrarlayan giderler oluşturun. Giderler otomatik olarak zamanında oluşturulur."
+    },
+    "dashboard": {
+      "title": "Dashboard Özeti",
+      "description": "Aylık toplamlar, kategori dağılımları ve son gider özetleri ile harcamalarınızı tek bakışta görün."
+    },
+    "categories": {
+      "title": "Akıllı Kategoriler",
+      "description": "Yemek, Ulaşım, Alışveriş, Eğlence ve daha fazlası dahil olmak üzere 9 önceden tanımlanmış kategori ile giderleri organize edin."
+    },
+    "cloudSync": {
+      "title": "Bulut Senkronizasyonu",
+      "description": "Giderleriniz güvenli bir şekilde buluta senkronize edilir. Verilerinize herhangi bir cihazdan, istediğiniz zaman erişin."
+    },
+    "search": {
+      "title": "Arama ve Filtreleme",
+      "description": "Güçlü arama ile giderleri hızlıca bulun ve kategori, tarih veya tutara göre filtreleyin. Harcama geçmişinizde zahmetsizce gezinin."
+    }
+  },
+  "showcase": {
+    "title": "Expensia'yı Keşfedin",
+    "subtitle": "Expensia'nın finanslarınızı yönetmenize nasıl yardımcı olduğunu görün",
+    "dashboard": {
+      "title": "Dashboard Genel Bakış",
+      "description": "Aylık toplamlar, kategori dağılımları ve son işlemler ile harcama özetinizi tek bakışta görüntüleyin"
+    },
+    "expenses": {
+      "title": "Gider Listesi",
+      "description": "Kategori filtreleri ve tarih gruplandırması ile tüm giderlerinize kolayca göz atın"
+    },
+    "addExpense": {
+      "title": "Gider Ekle",
+      "description": "Tutar girişi, kategori seçimi, tarih seçici ve isteğe bağlı notlarla tek seferlik giderleri hızlıca ekleyin"
+    },
+    "addRecurring": {
+      "title": "Tekrarlayan Giderler",
+      "description": "Abonelikler ve faturalar için sıklık seçenekleri, başlangıç tarihi ve isteğe bağlı bitiş tarihi ile tekrarlayan giderler oluşturun"
+    },
+    "editExpense": {
+      "title": "Gider Düzenle",
+      "description": "Tutar, kategori, tarih, sıklık ve aktif durum dahil olmak üzere herhangi bir gider detayını güncelleyin"
+    },
+    "search": {
+      "title": "Gider Ara",
+      "description": "Kategori ve tarihe göre gerçek zamanlı filtreleme ile arama çubuğunu kullanarak giderleri hızlıca bulun"
+    }
+  },
+  "about": {
+    "title": "Expensia Hakkında",
+    "subtitle": "Kişisel gider takip asistanınız",
+    "description": "Expensia, finanslarınızı etkili bir şekilde yönetmenize yardımcı olmak için tasarlanmış kişisel bir gider takip uygulamasıdır. Sezgisel arayüzü ile giderleri takip edebilir, harcamaları kategorilere ayırabilir, tekrarlayan ödemeler oluşturabilir ve finansal alışkanlıklarınız hakkında değerli bilgiler edinebilirsiniz.",
+    "mission": "Misyonumuz gider takibini basit ve erişilebilir hale getirmektir. İster günlük alışverişleri takip ediyor, ister aylık faturaları yönetiyor, ister tekrarlayan abonelikleri izliyorsanız, Expensia finanslarınızın üstünde kalmanıza yardımcı olur.",
+    "feature1": "Basit gider takibi",
+    "feature2": "Tekrarlayan giderler",
+    "feature3": "Bulut senkronizasyonu ve yedekleme",
+    "feature4": "Kategori özetleri"
+  },
+  "footer": {
+    "description": "Expensia - Kişisel gider takip uygulamanız",
+    "links": {
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Koşulları",
+      "contact": "İletişim"
+    },
+    "copyright": "© 2025 Expensia. Tüm hakları saklıdır."
+  }
+}

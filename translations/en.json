@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "showcase": "Showcase",
+    "about": "About"
+  },
+  "hero": {
+    "badge": "✨ Simple Expense Tracking",
+    "title": "Track Your Expenses Effortlessly",
+    "subtitle": "Expensia helps you manage your finances with an intuitive interface. Track expenses, categorize spending, and gain insights into your financial habits.",
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Everything you need to manage your expenses",
+    "expenseEntry": {
+      "title": "Quick Expense Entry",
+      "description": "Add expenses in seconds with our intuitive interface. Enter amount, select category, and add notes effortlessly."
+    },
+    "recurring": {
+      "title": "Recurring Expenses",
+      "description": "Set up recurring expenses for subscriptions, bills, and regular payments. Automatically generate expenses on schedule."
+    },
+    "dashboard": {
+      "title": "Dashboard Insights",
+      "description": "View your spending at a glance with monthly totals, category breakdowns, and recent expense summaries."
+    },
+    "categories": {
+      "title": "Smart Categories",
+      "description": "Organize expenses with 9 predefined categories including Food, Transport, Shopping, Entertainment, and more."
+    },
+    "cloudSync": {
+      "title": "Cloud Sync",
+      "description": "Your expenses are safely synced to the cloud. Access your data from any device, anytime."
+    },
+    "search": {
+      "title": "Search & Filter",
+      "description": "Quickly find expenses with powerful search and filter by category, date, or amount. Navigate your spending history effortlessly."
+    }
+  },
+  "showcase": {
+    "title": "See Expensia in Action",
+    "subtitle": "Discover how Expensia helps you manage your finances",
+    "dashboard": {
+      "title": "Dashboard Overview",
+      "description": "View your spending summary with monthly totals, category breakdowns, and recent transactions at a glance"
+    },
+    "expenses": {
+      "title": "Expense List",
+      "description": "Browse all your expenses with category filters and date grouping for easy navigation"
+    },
+    "addExpense": {
+      "title": "Add Expense",
+      "description": "Quickly add one-time expenses with amount input, category selection, date picker, and optional notes"
+    },
+    "addRecurring": {
+      "title": "Recurring Expenses",
+      "description": "Set up recurring expenses with frequency options, start date, and optional end date for subscriptions and bills"
+    },
+    "editExpense": {
+      "title": "Edit Expense",
+      "description": "Update any expense details including amount, category, date, frequency, and active status"
+    },
+    "search": {
+      "title": "Search Expenses",
+      "description": "Quickly find expenses using the search bar with real-time filtering by category and date"
+    }
+  },
+  "about": {
+    "title": "About Expensia",
+    "subtitle": "Your personal expense tracking companion",
+    "description": "Expensia is a personal expense tracking application designed to help you manage your finances effectively. With an intuitive interface, you can track expenses, categorize spending, set up recurring payments, and gain valuable insights into your financial habits.",
+    "mission": "Our mission is to make expense tracking simple and accessible. Whether you're tracking daily purchases, managing monthly bills, or monitoring recurring subscriptions, Expensia helps you stay on top of your finances.",
+    "feature1": "Simple expense tracking",
+    "feature2": "Recurring expenses",
+    "feature3": "Cloud sync & backup",
+    "feature4": "Category insights"
+  },
+  "footer": {
+    "description": "Expensia - Your personal expense tracker",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact"
+    },
+    "copyright": "© 2025 Expensia. All rights reserved."
+  }
+}
