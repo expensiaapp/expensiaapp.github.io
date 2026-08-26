@@ -27,6 +27,12 @@
     "label": "Features",
     "title": "Built for everyday expenses",
     "subtitle": "Everything important stays quick, clear, and close at hand.",
+    "groups": {
+      "capture": {"title": "Capture without friction", "description": "Save an expense in seconds, then find it again without digging."},
+      "automate": {"title": "Let routine costs run", "description": "Schedule recurring costs and keep current spending close on every signed-in iPhone."},
+      "understand": {"title": "Understand the month", "description": "See useful trends and optional category limits without turning tracking into accounting."},
+      "keep": {"title": "Keep what matters", "description": "Attach private receipts and take clean records with you when needed."}
+    },
     "expenseEntry": {"title": "Fast expense entry", "description": "Name an expense, choose one of nine categories, set the date, and save it in seconds."},
     "recurring": {"title": "Recurring costs, handled", "description": "Schedule bills and subscriptions, then pause, resume, edit, or delete them whenever needed."},
     "insights": {"title": "Clear spending insights", "description": "Review monthly totals, category breakdowns, a six-month trend, and a selected month at a glance."},
@@ -61,6 +67,7 @@
     "label": "App showcase",
     "title": "See Expensia in action",
     "subtitle": "Current screens from the English and Turkish app.",
+    "scrollHint": "Swipe to explore",
     "dashboard": {"title": "Dashboard", "alt": "Expensia Dashboard showing monthly spending"},
     "insights": {"title": "Insights", "alt": "Expensia Insights charts"},
     "expenses": {"title": "Expense history", "alt": "Searchable Expensia expense history"},

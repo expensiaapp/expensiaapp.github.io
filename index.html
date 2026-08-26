@@ -3,128 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta id="metaDescription" name="description" content="Track one-time and recurring expenses, understand spending, set budgets, save receipts, and export reports with Expensia for iPhone.">
+    <meta name="description" content="Track one-time and recurring expenses, understand spending, set budgets, save receipts, and export reports with Expensia for iPhone.">
+    <meta name="theme-color" content="#F8FAFB">
+    <link rel="canonical" href="https://expensia.roxyapps.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://expensia.roxyapps.net/">
+    <meta property="og:title" content="Expensia – Expense Tracker for iPhone">
+    <meta property="og:description" content="Track one-time and recurring expenses without the clutter.">
+    <meta property="og:image" content="https://expensia.roxyapps.net/resources/og.png">
+    <meta property="og:image:width" content="1731">
+    <meta property="og:image:height" content="909">
+    <meta property="og:image:alt" content="Expensia — See where your money goes.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Expensia – Expense Tracker for iPhone">
+    <meta name="twitter:description" content="Track one-time and recurring expenses without the clutter.">
+    <meta name="twitter:image" content="https://expensia.roxyapps.net/resources/og.png">
     <title>Expensia – Expense Tracker for iPhone</title>
     <link rel="icon" href="resources/icons/favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="resources/icons/favicon.svg">
     <link rel="icon" type="image/png" sizes="96x96" href="resources/icons/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="resources/icons/apple-touch-icon.png">
     <link rel="manifest" href="resources/icons/site.webmanifest">
-    <meta name="theme-color" content="#1E3A5F">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <nav class="navbar" aria-label="Primary navigation" data-translate-aria="aria.primaryNavigation">
-        <div class="container">
-            <a class="nav-brand" href="#home" aria-label="Expensia home" data-translate-aria="aria.home"><h1>Expensia</h1></a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" data-translate="nav.home">Home</a></li>
-                <li><a href="#features" data-translate="nav.features">Features</a></li>
-                <li><a href="#plans" data-translate="nav.plans">Free &amp; Pro</a></li>
-                <li><a href="#showcase" data-translate="nav.showcase">Showcase</a></li>
-                <li><a href="#about" data-translate="nav.about">About</a></li>
-                <li class="language-switcher">
-                    <label class="sr-only" for="languageSelect" data-translate="aria.language">Language</label>
-                    <select id="languageSelect" aria-label="Language" data-translate-aria="aria.language">
-                        <option value="en">English</option>
-                        <option value="tr">Türkçe</option>
-                    </select>
-                </li>
-            </ul>
-            <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-translate-aria="aria.toggleNavigation" aria-controls="navMenu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
+<body class="site-page">
+    <nav class="site-nav" aria-label="Primary navigation" data-translate-aria="aria.primaryNavigation">
+        <div class="container nav-inner">
+            <a class="nav-brand" href="#home" aria-label="Expensia home" data-translate-aria="aria.home">
+                <img src="resources/icons/app-icon.png" alt="" width="36" height="36">
+                <span>Expensia</span>
+            </a>
+            <div class="nav-desktop">
+                <a href="#features" data-translate="nav.features">Features</a>
+                <a href="#plans" data-translate="nav.plans">Free &amp; Pro</a>
+                <a href="#showcase" data-translate="nav.showcase">Showcase</a>
+                <div class="language-control" role="group" aria-label="Language" data-translate-aria="aria.language">
+                    <button type="button" data-language="en" aria-pressed="true">EN</button>
+                    <button type="button" data-language="tr" aria-pressed="false">TR</button>
+                </div>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark appearance"><span class="theme-symbol" aria-hidden="true">☾</span></button>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" data-translate-aria="aria.toggleNavigation" aria-controls="navPanel" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+        <div class="nav-panel" id="navPanel" hidden>
+            <a href="#features" data-translate="nav.features">Features</a>
+            <a href="#plans" data-translate="nav.plans">Free &amp; Pro</a>
+            <a href="#showcase" data-translate="nav.showcase">Showcase</a>
+            <div class="nav-panel-controls">
+                <div class="language-control" role="group" aria-label="Language" data-translate-aria="aria.language">
+                    <button type="button" data-language="en" aria-pressed="true">EN</button>
+                    <button type="button" data-language="tr" aria-pressed="false">TR</button>
+                </div>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark appearance"><span class="theme-symbol" aria-hidden="true">☾</span></button>
+            </div>
         </div>
     </nav>
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-bg-shapes" aria-hidden="true"><div class="shape shape-1"></div><div class="shape shape-2"></div><div class="shape shape-3"></div></div>
-            <div class="container">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="container hero-grid">
                 <div class="hero-content">
-                    <div class="hero-badge" data-translate="hero.badge">Simple expense tracking for iPhone</div>
-                    <h1 class="hero-title" data-translate="hero.title">See where your money goes</h1>
-                    <p class="hero-subtitle" data-translate="hero.subtitle">Track one-time and recurring expenses, spot spending patterns, and stay in control without turning money management into another job.</p>
-                    <div class="hero-buttons">
-                        <a href="https://apps.apple.com/app/id6756816856" id="appStoreLink" class="btn btn-appstore" aria-label="Download on the App Store" data-translate-aria="aria.appStore">
-                            <img src="resources/icons/en/appstore.svg" alt="Download on the App Store" data-translate-alt="aria.appStore" id="appStoreIcon">
-                        </a>
-                        <a href="#features" class="btn btn-secondary" data-translate="hero.learnMore">Explore features</a>
+                    <p class="eyebrow" data-translate="hero.badge">Simple expense tracking for iPhone</p>
+                    <h1 data-translate="hero.title">See where your money goes</h1>
+                    <p class="hero-copy" data-translate="hero.subtitle">Track one-time and recurring expenses, spot spending patterns, and stay in control without turning money management into another job.</p>
+                    <div class="hero-actions">
+                        <a href="https://apps.apple.com/app/id6756816856" class="app-store-link" aria-label="Download on the App Store" data-translate-aria="aria.appStore"><img src="resources/icons/en/appstore.svg" alt="Download on the App Store" data-translate-alt="aria.appStore" data-app-store-badge></a>
+                        <a href="#features" class="text-link"><span data-translate="hero.learnMore">Explore features</span><span aria-hidden="true">↓</span></a>
                     </div>
                 </div>
-                <div class="hero-visual" aria-hidden="true"><div class="phone-mockup"><img src="resources/icons/app-icon.png" alt="" class="hero-app-icon"></div></div>
-            </div>
-        </section>
-
-        <section id="features" class="features">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label" data-translate="features.label">Features</span>
-                    <h2 class="section-title" data-translate="features.title">Built for everyday expenses</h2>
-                    <p class="section-subtitle" data-translate="features.subtitle">Everything important stays quick, clear, and close at hand.</p>
-                </div>
-                <div class="bento-grid">
-                    <article class="bento-item"><div class="bento-content"><span class="feature-symbol" aria-hidden="true">+</span><h3 class="feature-title" data-translate="features.expenseEntry.title">Fast expense entry</h3><p class="feature-description" data-translate="features.expenseEntry.description">Name an expense, choose one of nine categories, set the date, and save it in seconds.</p></div></article>
-                    <article class="bento-item"><div class="bento-content"><span class="feature-symbol" aria-hidden="true">↻</span><h3 class="feature-title" data-translate="features.recurring.title">Recurring costs, handled</h3><p class="feature-description" data-translate="features.recurring.description">Schedule bills and subscriptions, then pause, resume, edit, or delete them whenever needed.</p></div></article>
-                    <article class="bento-item"><div class="bento-content"><span class="feature-symbol" aria-hidden="true">◔</span><h3 class="feature-title" data-translate="features.insights.title">Clear spending insights</h3><p class="feature-description" data-translate="features.insights.description">Review monthly totals, category breakdowns, a six-month trend, and a selected month at a glance.</p></div></article>
-                    <article class="bento-item"><div class="bento-content"><span class="feature-symbol" aria-hidden="true">⌕</span><h3 class="feature-title" data-translate="features.organize.title">Find every expense fast</h3><p class="feature-description" data-translate="features.organize.description">Search names and filter charges or recurring schedules by category and date.</p></div></article>
-                    <article class="bento-item"><div class="bento-content"><span class="feature-symbol pro-symbol" aria-hidden="true">%</span><span class="feature-tier" data-translate="plans.proBadge">Pro</span><h3 class="feature-title" data-translate="features.budgets.title">Monthly category budgets</h3><p class="feature-description" data-translate="features.budgets.description">Set category limits and follow progress without blocking expense entry.</p></div></article>
-                    <article class="bento-item"><div class="bento-content"><span class="feature-symbol pro-symbol" aria-hidden="true">▣</span><span class="feature-tier" data-translate="plans.proBadge">Pro</span><h3 class="feature-title" data-translate="features.receipts.title">Private receipt photos</h3><p class="feature-description" data-translate="features.receipts.description">Attach one camera or library photo to a one-time or generated expense.</p></div></article>
-                    <article class="bento-item"><div class="bento-content"><span class="feature-symbol pro-symbol" aria-hidden="true">⇩</span><span class="feature-tier" data-translate="plans.proBadge">Pro</span><h3 class="feature-title" data-translate="features.export.title">CSV and PDF export</h3><p class="feature-description" data-translate="features.export.description">Take your expense data with you or share a clear one-page summary.</p></div></article>
-                    <article class="bento-item"><div class="bento-content"><span class="feature-symbol" aria-hidden="true">□</span><h3 class="feature-title" data-translate="features.sync.title">Widgets and cloud sync</h3><p class="feature-description" data-translate="features.sync.description">See current-month spending from your Home Screen and keep signed-in iPhones in sync.</p></div></article>
+                <div class="hero-screens" aria-hidden="true">
+                    <figure class="hero-screen hero-screen-back"><img src="resources/screenshots/en/02-insights.png" data-screenshot="02-insights.png" alt=""></figure>
+                    <figure class="hero-screen hero-screen-front"><img src="resources/screenshots/en/01-dashboard.png" data-screenshot="01-dashboard.png" alt=""></figure>
+                    <span class="hero-chip">Expensia</span>
                 </div>
             </div>
         </section>
 
-        <section id="plans" class="plans-section">
+        <section id="features" class="section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-label" data-translate="plans.label">Free &amp; Pro</span>
-                    <h2 class="section-title" data-translate="plans.title">Start free. Upgrade when useful.</h2>
-                    <p class="section-subtitle" data-translate="plans.subtitle">Core tracking stays useful for free; Pro removes limits and unlocks advanced tools.</p>
+                <header class="section-header" data-reveal>
+                    <p class="eyebrow" data-translate="features.label">Features</p>
+                    <h2 data-translate="features.title">Built for everyday expenses</h2>
+                    <p data-translate="features.subtitle">Everything important stays quick, clear, and close at hand.</p>
+                </header>
+                <div class="feature-grid">
+                    <article class="feature-card" data-reveal>
+                        <span class="feature-symbol" aria-hidden="true">+</span>
+                        <h3 data-translate="features.groups.capture.title">Capture without friction</h3>
+                        <p data-translate="features.groups.capture.description">Save an expense in seconds, then find it again without digging.</p>
+                        <ul>
+                            <li data-translate="features.expenseEntry.title">Fast expense entry</li>
+                            <li data-translate="features.organize.title">Find every expense fast</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card" data-reveal>
+                        <span class="feature-symbol feature-symbol-teal" aria-hidden="true">↻</span>
+                        <h3 data-translate="features.groups.automate.title">Let routine costs run</h3>
+                        <p data-translate="features.groups.automate.description">Schedule recurring costs and keep current spending close on every signed-in iPhone.</p>
+                        <ul>
+                            <li data-translate="features.recurring.title">Recurring costs, handled</li>
+                            <li data-translate="features.sync.title">Widgets and cloud sync</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card" data-reveal>
+                        <span class="feature-symbol feature-symbol-gold" aria-hidden="true">◔</span>
+                        <h3 data-translate="features.groups.understand.title">Understand the month</h3>
+                        <p data-translate="features.groups.understand.description">See useful trends and optional category limits without turning tracking into accounting.</p>
+                        <ul>
+                            <li data-translate="features.insights.title">Clear spending insights</li>
+                            <li><span data-translate="features.budgets.title">Monthly category budgets</span><span class="pro-pill" data-translate="plans.proBadge">Pro</span></li>
+                        </ul>
+                    </article>
+                    <article class="feature-card" data-reveal>
+                        <span class="feature-symbol feature-symbol-coral" aria-hidden="true">⇩</span>
+                        <h3 data-translate="features.groups.keep.title">Keep what matters</h3>
+                        <p data-translate="features.groups.keep.description">Attach private receipts and take clean records with you when needed.</p>
+                        <ul>
+                            <li><span data-translate="features.receipts.title">Private receipt photos</span><span class="pro-pill" data-translate="plans.proBadge">Pro</span></li>
+                            <li><span data-translate="features.export.title">CSV and PDF export</span><span class="pro-pill" data-translate="plans.proBadge">Pro</span></li>
+                        </ul>
+                    </article>
                 </div>
-                <div class="plans-grid">
-                    <article class="plan-card">
-                        <p class="plan-eyebrow" data-translate="plans.freeBadge">Free</p>
+            </div>
+        </section>
+
+        <section id="plans" class="section section-tinted">
+            <div class="container">
+                <header class="section-header" data-reveal>
+                    <p class="eyebrow" data-translate="plans.label">Free &amp; Pro</p>
+                    <h2 data-translate="plans.title">Start free. Upgrade when useful.</h2>
+                    <p data-translate="plans.subtitle">Core tracking stays useful for free; Pro removes limits and unlocks advanced tools.</p>
+                </header>
+                <div class="plan-grid">
+                    <article class="plan-card" data-reveal>
+                        <p class="plan-label" data-translate="plans.freeBadge">Free</p>
                         <h3 data-translate="plans.free.title">Everyday tracking</h3>
-                        <ul><li data-translate="plans.free.expenses">10 manually entered expenses each month</li><li data-translate="plans.free.recurring">2 active recurring schedules</li><li data-translate="plans.free.generated">Generated recurring charges do not use the monthly limit</li><li data-translate="plans.free.included">Dashboard, Insights, widgets, categories, and cloud sync</li></ul>
+                        <ul>
+                            <li data-translate="plans.free.expenses">10 manually entered expenses each month</li>
+                            <li data-translate="plans.free.recurring">2 active recurring schedules</li>
+                            <li data-translate="plans.free.generated">Generated recurring charges do not use the monthly limit</li>
+                            <li data-translate="plans.free.included">Dashboard, Insights, widgets, categories, and cloud sync</li>
+                        </ul>
                     </article>
-                    <article class="plan-card plan-card-pro">
-                        <p class="plan-eyebrow" data-translate="plans.proBadge">Pro</p>
+                    <article class="plan-card plan-card-pro" data-reveal>
+                        <p class="plan-label" data-translate="plans.proBadge">Pro</p>
                         <h3 data-translate="plans.pro.title">More control, no limits</h3>
-                        <ul><li data-translate="plans.pro.unlimited">Unlimited expenses and recurring schedules</li><li data-translate="plans.pro.budgets">Monthly category budgets</li><li data-translate="plans.pro.receipts">Private receipt photos</li><li data-translate="plans.pro.export">CSV data export and PDF summaries</li></ul>
+                        <ul>
+                            <li data-translate="plans.pro.unlimited">Unlimited expenses and recurring schedules</li>
+                            <li data-translate="plans.pro.budgets">Monthly category budgets</li>
+                            <li data-translate="plans.pro.receipts">Private receipt photos</li>
+                            <li data-translate="plans.pro.export">CSV data export and PDF summaries</li>
+                        </ul>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="showcase" class="showcase">
+        <section id="showcase" class="section showcase-section">
             <div class="container">
-                <div class="section-header"><span class="section-label" data-translate="showcase.label">App showcase</span><h2 class="section-title" data-translate="showcase.title">See Expensia in action</h2><p class="section-subtitle" data-translate="showcase.subtitle">Current screens from the English and Turkish app.</p></div>
-                <div class="showcase-carousel">
-                    <figure class="showcase-item"><div class="showcase-image"><img src="resources/screenshots/en/01-dashboard.png" data-screenshot="01-dashboard.png" alt="Expensia Dashboard showing monthly spending" data-translate-alt="showcase.dashboard.alt" class="showcase-screenshot"></div><figcaption class="showcase-caption"><h3 data-translate="showcase.dashboard.title">Dashboard</h3></figcaption></figure>
-                    <figure class="showcase-item"><div class="showcase-image"><img src="resources/screenshots/en/02-insights.png" data-screenshot="02-insights.png" alt="Expensia Insights charts" data-translate-alt="showcase.insights.alt" class="showcase-screenshot"></div><figcaption class="showcase-caption"><h3 data-translate="showcase.insights.title">Insights</h3></figcaption></figure>
-                    <figure class="showcase-item"><div class="showcase-image"><img src="resources/screenshots/en/03-expenses.png" data-screenshot="03-expenses.png" alt="Searchable Expensia expense history" data-translate-alt="showcase.expenses.alt" class="showcase-screenshot"></div><figcaption class="showcase-caption"><h3 data-translate="showcase.expenses.title">Expense history</h3></figcaption></figure>
-                    <figure class="showcase-item"><div class="showcase-image"><img src="resources/screenshots/en/04-recurring.png" data-screenshot="04-recurring.png" alt="Recurring expense schedules in Expensia" data-translate-alt="showcase.recurring.alt" class="showcase-screenshot"></div><figcaption class="showcase-caption"><h3 data-translate="showcase.recurring.title">Recurring schedules</h3></figcaption></figure>
-                    <figure class="showcase-item"><div class="showcase-image"><img src="resources/screenshots/en/05-add.png" data-screenshot="05-add.png" alt="Adding an expense and receipt in Expensia" data-translate-alt="showcase.add.alt" class="showcase-screenshot"></div><figcaption class="showcase-caption"><h3 data-translate="showcase.add.title">Fast entry</h3></figcaption></figure>
-                </div>
+                <header class="section-header section-header-row" data-reveal>
+                    <div>
+                        <p class="eyebrow" data-translate="showcase.label">App showcase</p>
+                        <h2 data-translate="showcase.title">See Expensia in action</h2>
+                        <p data-translate="showcase.subtitle">Current screens from the English and Turkish app.</p>
+                    </div>
+                    <span class="scroll-hint" data-translate="showcase.scrollHint">Swipe to explore</span>
+                </header>
+            </div>
+            <div class="screenshot-rail" data-reveal>
+                <figure class="screenshot-card"><img src="resources/screenshots/en/01-dashboard.png" data-screenshot="01-dashboard.png" alt="Expensia Dashboard showing monthly spending" data-translate-alt="showcase.dashboard.alt"><figcaption data-translate="showcase.dashboard.title">Dashboard</figcaption></figure>
+                <figure class="screenshot-card"><img src="resources/screenshots/en/02-insights.png" data-screenshot="02-insights.png" alt="Expensia Insights charts" data-translate-alt="showcase.insights.alt"><figcaption data-translate="showcase.insights.title">Insights</figcaption></figure>
+                <figure class="screenshot-card"><img src="resources/screenshots/en/03-expenses.png" data-screenshot="03-expenses.png" alt="Searchable Expensia expense history" data-translate-alt="showcase.expenses.alt"><figcaption data-translate="showcase.expenses.title">Expense history</figcaption></figure>
+                <figure class="screenshot-card"><img src="resources/screenshots/en/04-recurring.png" data-screenshot="04-recurring.png" alt="Recurring expense schedules in Expensia" data-translate-alt="showcase.recurring.alt"><figcaption data-translate="showcase.recurring.title">Recurring schedules</figcaption></figure>
+                <figure class="screenshot-card"><img src="resources/screenshots/en/05-add.png" data-screenshot="05-add.png" alt="Adding an expense and receipt in Expensia" data-translate-alt="showcase.add.alt"><figcaption data-translate="showcase.add.title">Fast entry</figcaption></figure>
             </div>
         </section>
 
-        <section id="about" class="cta-section">
-            <div class="container"><div class="cta-content">
-                <h2 class="cta-title" data-translate="about.title">Expense tracking without the clutter</h2>
-                <p class="cta-description" data-translate="about.description">Expensia is intentionally small: one-time expenses, recurring costs, and the tools that make both easier to understand. Available in English and Turkish for iPhone.</p>
-                <div class="cta-features"><div class="cta-feature"><span aria-hidden="true">✓</span><span data-translate="about.feature1">One-time and recurring tracking</span></div><div class="cta-feature"><span aria-hidden="true">✓</span><span data-translate="about.feature2">English and Turkish</span></div><div class="cta-feature"><span aria-hidden="true">✓</span><span data-translate="about.feature3">Private account and cloud sync</span></div></div>
-                <div class="cta-buttons"><a href="https://apps.apple.com/app/id6756816856" id="appStoreLink2" class="btn btn-appstore-large" aria-label="Download on the App Store" data-translate-aria="aria.appStore"><img src="resources/icons/en/appstore.svg" alt="Download on the App Store" data-translate-alt="aria.appStore" id="appStoreIcon2"></a></div>
-            </div></div>
+        <section id="about" class="download-section">
+            <div class="container">
+                <div class="download-card" data-reveal>
+                    <img class="download-icon" src="resources/icons/app-icon.png" alt="" width="88" height="88">
+                    <div class="download-copy">
+                        <h2 data-translate="about.title">Expense tracking without the clutter</h2>
+                        <p data-translate="about.description">Expensia is intentionally small: one-time expenses, recurring costs, and the tools that make both easier to understand. Available in English and Turkish for iPhone.</p>
+                    </div>
+                    <a href="https://apps.apple.com/app/id6756816856" class="app-store-link" aria-label="Download on the App Store" data-translate-aria="aria.appStore"><img src="resources/icons/en/appstore.svg" alt="Download on the App Store" data-translate-alt="aria.appStore" data-app-store-badge></a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="footer"><div class="container"><div class="footer-content">
-        <div class="footer-brand"><h3>Expensia</h3><p data-translate="footer.description">Your personal expense tracker for iPhone.</p></div>
-        <div class="footer-links"><h4 data-translate="footer.linksTitle">Links</h4><ul><li><a href="content/en/privacy-policy.html" data-translate="footer.links.privacy" id="privacyLink">Privacy Policy</a></li><li><a href="content/en/terms-of-service.html" data-translate="footer.links.terms" id="termsLink">Terms of Service</a></li><li><a href="content/en/kvkk.html" id="kvkkLink">KVKK</a></li><li><a href="mailto:ulas.san@gmail.com" data-translate="footer.links.contact">Contact</a></li></ul></div>
-    </div><div class="footer-bottom"><p data-translate="footer.copyright">© 2026 Expensia. All rights reserved.</p></div></div></footer>
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="container footer-main">
+            <div class="footer-brand">
+                <a class="nav-brand" href="#home"><img src="resources/icons/app-icon.png" alt="" width="32" height="32"><span>Expensia</span></a>
+                <p data-translate="footer.description">Your personal expense tracker for iPhone.</p>
+            </div>
+            <nav class="footer-links" aria-label="Legal">
+                <a href="content/en/privacy-policy.html" data-translate="footer.links.privacy" id="privacyLink">Privacy Policy</a>
+                <a href="content/en/terms-of-service.html" data-translate="footer.links.terms" id="termsLink">Terms of Service</a>
+                <a href="content/en/kvkk.html" id="kvkkLink">KVKK</a>
+                <a href="mailto:ulas.san@gmail.com" data-translate="footer.links.contact">Contact</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom"><p data-translate="footer.copyright">© 2026 Expensia. All rights reserved.</p></div>
+    </footer>
 </body>
 </html>

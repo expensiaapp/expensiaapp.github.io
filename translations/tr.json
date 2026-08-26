@@ -27,6 +27,12 @@
     "label": "Özellikler",
     "title": "Günlük giderler için tasarlandı",
     "subtitle": "Önemli olan her şey hızlı, anlaşılır ve elinizin altında.",
+    "groups": {
+      "capture": {"title": "Zorlanmadan kaydedin", "description": "Gideri saniyeler içinde kaydedin, sonra aramadan bulun."},
+      "automate": {"title": "Rutin giderler kendiliğinden ilerlesin", "description": "Tekrarlayan giderleri planlayın ve güncel harcamayı giriş yaptığınız her iPhone’da görün."},
+      "understand": {"title": "Ayı anlayın", "description": "Takibi muhasebeye dönüştürmeden yararlı eğilimleri ve isteğe bağlı kategori limitlerini görün."},
+      "keep": {"title": "Önemli olanı saklayın", "description": "Özel fişleri ekleyin ve gerektiğinde düzenli kayıtları yanınıza alın."}
+    },
     "expenseEntry": {"title": "Hızlı gider girişi", "description": "Gidere ad verin, dokuz kategoriden birini seçin, tarihi belirleyin ve saniyeler içinde kaydedin."},
     "recurring": {"title": "Tekrarlayan giderler hazır", "description": "Fatura ve abonelikleri planlayın; gerektiğinde duraklatın, sürdürün, düzenleyin veya silin."},
     "insights": {"title": "Anlaşılır harcama analizleri", "description": "Aylık toplamları, kategori dağılımlarını, altı aylık eğilimi ve seçtiğiniz ayı tek bakışta inceleyin."},
@@ -61,6 +67,7 @@
     "label": "Uygulama galerisi",
     "title": "Expensia’yı çalışırken görün",
     "subtitle": "İngilizce ve Türkçe uygulamanın güncel ekranları.",
+    "scrollHint": "Keşfetmek için kaydırın",
     "dashboard": {"title": "Dashboard", "alt": "Aylık harcamayı gösteren Expensia Dashboard ekranı"},
     "insights": {"title": "Analizler", "alt": "Expensia harcama grafikleri"},
     "expenses": {"title": "Gider geçmişi", "alt": "Aranabilir Expensia gider geçmişi"},

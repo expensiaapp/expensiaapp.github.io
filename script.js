@@ -1,203 +1,207 @@
-// Translation system
-let currentLanguage = localStorage.getItem('language') || 'en';
-let translations = {};
+const languages = ['en', 'tr'];
+const translationCache = new Map();
+const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Load translations
-async function loadTranslations(lang) {
+function storedValue(key, allowedValues) {
     try {
-        const response = await fetch(`translations/${lang}.json`);
-        translations[lang] = await response.json();
-        return translations[lang];
-    } catch (error) {
-        console.error(`Error loading translations for ${lang}:`, error);
-        // Fallback to English if translation fails
-        if (lang !== 'en') {
-            return loadTranslations('en');
-        }
-        return {};
+        const value = localStorage.getItem(key);
+        return allowedValues.includes(value) ? value : null;
+    } catch {
+        return null;
     }
 }
 
-// Get nested translation value
-function getNestedValue(obj, path) {
-    return path.split('.').reduce((current, key) => current?.[key], obj);
+function storeValue(key, value) {
+    try {
+        localStorage.setItem(key, value);
+    } catch {
+        // Preferences remain available for this page when storage is unavailable.
+    }
 }
 
-// Update page content with translations
-function updatePageContent(translations) {
-    const elements = document.querySelectorAll('[data-translate]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-translate');
-        const translation = getNestedValue(translations, key);
-        if (translation) {
-            if (element.tagName === 'INPUT' && element.type === 'submit') {
-                element.value = translation;
-            } else {
-                element.textContent = translation;
-            }
-        }
+const isLegalPage = document.body.classList.contains('legal-page');
+let currentLanguage = isLegalPage
+    ? document.documentElement.lang
+    : storedValue('language', languages)
+        || (navigator.language.toLowerCase().startsWith('tr') ? 'tr' : 'en');
+let currentTheme = storedValue('theme', ['light', 'dark'])
+    || (darkMode.matches ? 'dark' : 'light');
+let languageRequest = 0;
+
+function translationValue(source, path) {
+    return path.split('.').reduce((value, key) => value?.[key], source);
+}
+
+async function translationsFor(language) {
+    if (translationCache.has(language)) return translationCache.get(language);
+
+    const response = await fetch(`translations/${language}.json`);
+    if (!response.ok) throw new Error(`Translation request failed: ${response.status}`);
+
+    const values = await response.json();
+    translationCache.set(language, values);
+    return values;
+}
+
+function applyTranslations(values) {
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const value = translationValue(values, element.dataset.translate);
+        if (value) element.textContent = value;
     });
 
     document.querySelectorAll('[data-translate-aria]').forEach(element => {
-        const translation = getNestedValue(translations, element.dataset.translateAria);
-        if (translation) element.setAttribute('aria-label', translation);
+        const value = translationValue(values, element.dataset.translateAria);
+        if (value) element.setAttribute('aria-label', value);
     });
 
     document.querySelectorAll('[data-translate-alt]').forEach(element => {
-        const translation = getNestedValue(translations, element.dataset.translateAlt);
-        if (translation) element.setAttribute('alt', translation);
+        const value = translationValue(values, element.dataset.translateAlt);
+        if (value) element.setAttribute('alt', value);
     });
 
-    const title = getNestedValue(translations, 'metadata.title');
-    const description = getNestedValue(translations, 'metadata.description');
+    const title = translationValue(values, 'metadata.title');
+    const description = translationValue(values, 'metadata.description');
     if (title) document.title = title;
-    if (description) document.getElementById('metaDescription')?.setAttribute('content', description);
+    if (title) {
+        document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(meta => {
+            meta.setAttribute('content', title);
+        });
+    }
+    if (description) {
+        document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+        document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]').forEach(meta => {
+            meta.setAttribute('content', description);
+        });
+    }
 }
 
-// Update translatable images
-function updateTranslatableImages(lang) {
-    const appStoreIcon = document.getElementById('appStoreIcon');
-    const appStoreIcon2 = document.getElementById('appStoreIcon2');
-    
-    if (appStoreIcon) {
-        appStoreIcon.src = `resources/icons/${lang}/appstore.svg`;
-    }
-    if (appStoreIcon2) {
-        appStoreIcon2.src = `resources/icons/${lang}/appstore.svg`;
-    }
+function updateLocalizedAssets(language) {
+    document.querySelectorAll('[data-app-store-badge]').forEach(image => {
+        image.src = `resources/icons/${language}/appstore.svg`;
+    });
 
     document.querySelectorAll('[data-screenshot]').forEach(image => {
-        image.src = `resources/screenshots/${lang}/${image.dataset.screenshot}`;
+        image.src = `resources/screenshots/${language}/${image.dataset.screenshot}`;
+    });
+
+    const links = {
+        privacyLink: 'privacy-policy.html',
+        termsLink: 'terms-of-service.html',
+        kvkkLink: 'kvkk.html'
+    };
+
+    Object.entries(links).forEach(([id, page]) => {
+        const link = document.getElementById(id);
+        if (link) link.href = `content/${language}/${page}`;
     });
 }
 
-// Update legal page links
-function updateLegalPageLinks(lang) {
-    const privacyLink = document.getElementById('privacyLink');
-    const termsLink = document.getElementById('termsLink');
-    const kvkkLink = document.getElementById('kvkkLink');
-    
-    if (privacyLink) {
-        privacyLink.href = `content/${lang}/privacy-policy.html`;
-    }
-    if (termsLink) {
-        termsLink.href = `content/${lang}/terms-of-service.html`;
-    }
-    if (kvkkLink) {
-        kvkkLink.href = `content/${lang}/kvkk.html`;
-    }
+function updateLanguageControls(language) {
+    document.querySelectorAll('[data-language]').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.language === language));
+    });
 }
 
-// Change language
-async function changeLanguage(lang) {
-    if (!translations[lang]) {
-        await loadTranslations(lang);
-    }
-    currentLanguage = lang;
-    localStorage.setItem('language', lang);
-    updatePageContent(translations[lang]);
-    updateTranslatableImages(lang);
-    updateLegalPageLinks(lang);
-    document.documentElement.lang = lang;
-    
-    // Update language selector
-    const languageSelect = document.getElementById('languageSelect');
-    if (languageSelect) {
-        languageSelect.value = lang;
-    }
-}
+async function setLanguage(language, persist = true) {
+    if (!languages.includes(language)) language = 'en';
+    const request = ++languageRequest;
 
-// Initialize translations
-async function initTranslations() {
-    // Load current language translations
-    await loadTranslations(currentLanguage);
-    
-    // Preload other language
-    const otherLang = currentLanguage === 'en' ? 'tr' : 'en';
-    await loadTranslations(otherLang);
-    
-    // Update page content
-    updatePageContent(translations[currentLanguage]);
-    updateTranslatableImages(currentLanguage);
-    updateLegalPageLinks(currentLanguage);
+    try {
+        const values = await translationsFor(language);
+        if (request !== languageRequest) return;
+        currentLanguage = language;
+        applyTranslations(values);
+    } catch (error) {
+        if (request !== languageRequest) return;
+        console.error(error);
+        if (language !== 'en') return setLanguage('en', persist);
+    }
+
+    updateLocalizedAssets(currentLanguage);
+    updateLanguageControls(currentLanguage);
     document.documentElement.lang = currentLanguage;
-    
-    // Set language selector
-    const languageSelect = document.getElementById('languageSelect');
-    if (languageSelect) {
-        languageSelect.value = currentLanguage;
-        languageSelect.addEventListener('change', (e) => {
-            changeLanguage(e.target.value);
-        });
-    }
+    if (persist) storeValue('language', currentLanguage);
+    updateThemeControls();
 }
 
-// Mobile menu toggle
-function initMobileMenu() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-            navToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
-        });
-        
-        // Close menu when clicking on a link
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
-}
+function updateThemeControls() {
+    const useLight = currentLanguage === 'tr' ? 'Açık görünümü kullan' : 'Use light appearance';
+    const useDark = currentLanguage === 'tr' ? 'Koyu görünümü kullan' : 'Use dark appearance';
 
-// Smooth scroll for anchor links
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && href !== '') {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
+    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+        button.setAttribute('aria-label', currentTheme === 'dark' ? useLight : useDark);
+        button.querySelector('.theme-symbol').textContent = currentTheme === 'dark' ? '☀︎' : '☾';
     });
 }
 
-// Navbar scroll effect
-function initNavbarScroll() {
-    const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.05)';
+function setTheme(theme, persist = true) {
+    currentTheme = theme === 'dark' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = currentTheme;
+    document.documentElement.style.colorScheme = currentTheme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute(
+        'content',
+        currentTheme === 'dark' ? '#0D1117' : '#F8FAFB'
+    );
+    if (persist) storeValue('theme', currentTheme);
+    updateThemeControls();
+}
+
+function initNavigation() {
+    const toggle = document.querySelector('.nav-toggle');
+    const panel = document.getElementById('navPanel');
+    if (!toggle || !panel) return;
+
+    const close = () => {
+        panel.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', () => {
+        const opening = panel.hidden;
+        panel.hidden = !opening;
+        toggle.setAttribute('aria-expanded', String(opening));
+    });
+
+    panel.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !panel.hidden) {
+            close();
+            toggle.focus();
         }
-        
-        lastScroll = currentScroll;
     });
 }
 
-// Initialize everything when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    initTranslations();
-    initMobileMenu();
-    initSmoothScroll();
-    initNavbarScroll();
+function initReveals() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const elements = document.querySelectorAll('[data-reveal]');
+    if (!elements.length || !('IntersectionObserver' in window)) return;
+
+    elements.forEach(element => element.classList.add('reveal-pending'));
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        });
+    }, { threshold: 0.14 });
+
+    elements.forEach(element => observer.observe(element));
+}
+
+document.querySelectorAll('[data-language]').forEach(button => {
+    button.addEventListener('click', () => setLanguage(button.dataset.language));
 });
+
+document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+    button.addEventListener('click', () => setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
+});
+
+setTheme(currentTheme, false);
+if (isLegalPage) {
+    updateThemeControls();
+} else {
+    setLanguage(currentLanguage, false);
+}
+initNavigation();
+initReveals();
