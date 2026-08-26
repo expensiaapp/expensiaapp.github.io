@@ -37,6 +37,21 @@ function updatePageContent(translations) {
             }
         }
     });
+
+    document.querySelectorAll('[data-translate-aria]').forEach(element => {
+        const translation = getNestedValue(translations, element.dataset.translateAria);
+        if (translation) element.setAttribute('aria-label', translation);
+    });
+
+    document.querySelectorAll('[data-translate-alt]').forEach(element => {
+        const translation = getNestedValue(translations, element.dataset.translateAlt);
+        if (translation) element.setAttribute('alt', translation);
+    });
+
+    const title = getNestedValue(translations, 'metadata.title');
+    const description = getNestedValue(translations, 'metadata.description');
+    if (title) document.title = title;
+    if (description) document.getElementById('metaDescription')?.setAttribute('content', description);
 }
 
 // Update translatable images
@@ -50,6 +65,10 @@ function updateTranslatableImages(lang) {
     if (appStoreIcon2) {
         appStoreIcon2.src = `resources/icons/${lang}/appstore.svg`;
     }
+
+    document.querySelectorAll('[data-screenshot]').forEach(image => {
+        image.src = `resources/screenshots/${lang}/${image.dataset.screenshot}`;
+    });
 }
 
 // Update legal page links
@@ -122,6 +141,7 @@ function initMobileMenu() {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
         });
         
         // Close menu when clicking on a link
@@ -130,6 +150,7 @@ function initMobileMenu() {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
     }
@@ -180,4 +201,3 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initNavbarScroll();
 });
-

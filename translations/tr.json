@@ -1,90 +1,83 @@
 {
+  "metadata": {
+    "title": "Expensia – iPhone Gider Takibi",
+    "description": "Expensia ile tek seferlik ve tekrarlayan giderleri takip edin, harcamaları anlayın, bütçe belirleyin, fişleri saklayın ve raporları dışa aktarın."
+  },
+  "aria": {
+    "primaryNavigation": "Ana gezinme",
+    "home": "Expensia ana sayfası",
+    "language": "Dil",
+    "toggleNavigation": "Gezinmeyi aç veya kapat",
+    "appStore": "App Store’dan indirin"
+  },
   "nav": {
     "home": "Ana Sayfa",
     "features": "Özellikler",
+    "plans": "Ücretsiz ve Pro",
     "showcase": "Galeri",
     "about": "Hakkında"
   },
   "hero": {
-    "badge": "✨ Basit Gider Takibi",
-    "title": "Giderlerinizi Zahmetsizce Takip Edin",
-    "subtitle": "Expensia, sezgisel arayüzü ile finanslarınızı yönetmenize yardımcı olur. Giderleri takip edin, harcamaları kategorilere ayırın ve finansal alışkanlıklarınız hakkında değerli bilgiler edinin.",
-    "cta": "Hemen Başla",
-    "learnMore": "Daha Fazla Bilgi"
+    "badge": "iPhone için sade gider takibi",
+    "title": "Paranızın nereye gittiğini görün",
+    "subtitle": "Tek seferlik ve tekrarlayan giderleri takip edin, harcama alışkanlıklarını görün ve para yönetimini yeni bir işe dönüştürmeden kontrolü elinizde tutun.",
+    "learnMore": "Özellikleri keşfedin"
   },
   "features": {
-    "title": "Güçlü Özellikler",
-    "subtitle": "Giderlerinizi yönetmek için ihtiyacınız olan her şey",
-    "expenseEntry": {
-      "title": "Hızlı Gider Girişi",
-      "description": "Sezgisel arayüzümüzle saniyeler içinde gider ekleyin. Tutarı girin, kategori seçin ve notlar ekleyin."
+    "label": "Özellikler",
+    "title": "Günlük giderler için tasarlandı",
+    "subtitle": "Önemli olan her şey hızlı, anlaşılır ve elinizin altında.",
+    "expenseEntry": {"title": "Hızlı gider girişi", "description": "Gidere ad verin, dokuz kategoriden birini seçin, tarihi belirleyin ve saniyeler içinde kaydedin."},
+    "recurring": {"title": "Tekrarlayan giderler hazır", "description": "Fatura ve abonelikleri planlayın; gerektiğinde duraklatın, sürdürün, düzenleyin veya silin."},
+    "insights": {"title": "Anlaşılır harcama analizleri", "description": "Aylık toplamları, kategori dağılımlarını, altı aylık eğilimi ve seçtiğiniz ayı tek bakışta inceleyin."},
+    "organize": {"title": "Her gideri hızla bulun", "description": "Adlarda arama yapın; giderleri veya tekrarlayan planları kategori ve tarihe göre filtreleyin."},
+    "budgets": {"title": "Aylık kategori bütçeleri", "description": "Kategori limitleri belirleyin ve gider girişini engellemeden ilerlemeyi izleyin."},
+    "receipts": {"title": "Özel fiş fotoğrafları", "description": "Tek seferlik veya oluşturulmuş bir gidere kameradan ya da arşivden bir fotoğraf ekleyin."},
+    "export": {"title": "CSV ve PDF dışa aktarma", "description": "Gider verilerinizi yanınıza alın veya anlaşılır tek sayfalık bir özet paylaşın."},
+    "sync": {"title": "Araç takımları ve bulut eşitleme", "description": "Ana Ekran’dan bu ayki harcamayı görün ve giriş yaptığınız iPhone’ları eşit tutun."}
+  },
+  "plans": {
+    "label": "Ücretsiz ve Pro",
+    "title": "Ücretsiz başlayın. Gerektiğinde yükseltin.",
+    "subtitle": "Temel takip ücretsiz sürer; Pro limitleri kaldırır ve gelişmiş araçları açar.",
+    "freeBadge": "Ücretsiz",
+    "proBadge": "Pro",
+    "free": {
+      "title": "Günlük takip",
+      "expenses": "Her ay elle eklenen 10 gider",
+      "recurring": "2 aktif tekrarlayan plan",
+      "generated": "Otomatik oluşturulan giderler aylık limiti kullanmaz",
+      "included": "Dashboard, Analizler, araç takımları, kategoriler ve bulut eşitleme"
     },
-    "recurring": {
-      "title": "Tekrarlayan Giderler",
-      "description": "Abonelikler, faturalar ve düzenli ödemeler için tekrarlayan giderler oluşturun. Giderler otomatik olarak zamanında oluşturulur."
-    },
-    "dashboard": {
-      "title": "Dashboard Özeti",
-      "description": "Aylık toplamlar, kategori dağılımları ve son gider özetleri ile harcamalarınızı tek bakışta görün."
-    },
-    "categories": {
-      "title": "Akıllı Kategoriler",
-      "description": "Yemek, Ulaşım, Alışveriş, Eğlence ve daha fazlası dahil olmak üzere 9 önceden tanımlanmış kategori ile giderleri organize edin."
-    },
-    "cloudSync": {
-      "title": "Bulut Senkronizasyonu",
-      "description": "Giderleriniz güvenli bir şekilde buluta senkronize edilir. Verilerinize herhangi bir cihazdan, istediğiniz zaman erişin."
-    },
-    "search": {
-      "title": "Arama ve Filtreleme",
-      "description": "Güçlü arama ile giderleri hızlıca bulun ve kategori, tarih veya tutara göre filtreleyin. Harcama geçmişinizde zahmetsizce gezinin."
+    "pro": {
+      "title": "Daha fazla kontrol, limitsiz takip",
+      "unlimited": "Sınırsız gider ve tekrarlayan plan",
+      "budgets": "Aylık kategori bütçeleri",
+      "receipts": "Özel fiş fotoğrafları",
+      "export": "CSV veri aktarımı ve PDF özetleri"
     }
   },
   "showcase": {
-    "title": "Expensia'yı Keşfedin",
-    "subtitle": "Expensia'nın finanslarınızı yönetmenize nasıl yardımcı olduğunu görün",
-    "dashboard": {
-      "title": "Dashboard Genel Bakış",
-      "description": "Aylık toplamlar, kategori dağılımları ve son işlemler ile harcama özetinizi tek bakışta görüntüleyin"
-    },
-    "expenses": {
-      "title": "Gider Listesi",
-      "description": "Kategori filtreleri ve tarih gruplandırması ile tüm giderlerinize kolayca göz atın"
-    },
-    "addExpense": {
-      "title": "Gider Ekle",
-      "description": "Tutar girişi, kategori seçimi, tarih seçici ve isteğe bağlı notlarla tek seferlik giderleri hızlıca ekleyin"
-    },
-    "addRecurring": {
-      "title": "Tekrarlayan Giderler",
-      "description": "Abonelikler ve faturalar için sıklık seçenekleri, başlangıç tarihi ve isteğe bağlı bitiş tarihi ile tekrarlayan giderler oluşturun"
-    },
-    "editExpense": {
-      "title": "Gider Düzenle",
-      "description": "Tutar, kategori, tarih, sıklık ve aktif durum dahil olmak üzere herhangi bir gider detayını güncelleyin"
-    },
-    "search": {
-      "title": "Gider Ara",
-      "description": "Kategori ve tarihe göre gerçek zamanlı filtreleme ile arama çubuğunu kullanarak giderleri hızlıca bulun"
-    }
+    "label": "Uygulama galerisi",
+    "title": "Expensia’yı çalışırken görün",
+    "subtitle": "İngilizce ve Türkçe uygulamanın güncel ekranları.",
+    "dashboard": {"title": "Dashboard", "alt": "Aylık harcamayı gösteren Expensia Dashboard ekranı"},
+    "insights": {"title": "Analizler", "alt": "Expensia harcama grafikleri"},
+    "expenses": {"title": "Gider geçmişi", "alt": "Aranabilir Expensia gider geçmişi"},
+    "recurring": {"title": "Tekrarlayan planlar", "alt": "Expensia tekrarlayan gider planları"},
+    "add": {"title": "Hızlı giriş", "alt": "Expensia’da gider ve fiş ekleme ekranı"}
   },
   "about": {
-    "title": "Expensia Hakkında",
-    "subtitle": "Kişisel gider takip asistanınız",
-    "description": "Expensia, finanslarınızı etkili bir şekilde yönetmenize yardımcı olmak için tasarlanmış kişisel bir gider takip uygulamasıdır. Sezgisel arayüzü ile giderleri takip edebilir, harcamaları kategorilere ayırabilir, tekrarlayan ödemeler oluşturabilir ve finansal alışkanlıklarınız hakkında değerli bilgiler edinebilirsiniz.",
-    "mission": "Misyonumuz gider takibini basit ve erişilebilir hale getirmektir. İster günlük alışverişleri takip ediyor, ister aylık faturaları yönetiyor, ister tekrarlayan abonelikleri izliyorsanız, Expensia finanslarınızın üstünde kalmanıza yardımcı olur.",
-    "feature1": "Basit gider takibi",
-    "feature2": "Tekrarlayan giderler",
-    "feature3": "Bulut senkronizasyonu ve yedekleme",
-    "feature4": "Kategori özetleri"
+    "title": "Karmaşa olmadan gider takibi",
+    "description": "Expensia bilerek küçük tutuldu: tek seferlik giderler, tekrarlayan ödemeler ve ikisini de anlamayı kolaylaştıran araçlar. iPhone’da İngilizce ve Türkçe kullanılabilir.",
+    "feature1": "Tek seferlik ve tekrarlayan gider takibi",
+    "feature2": "İngilizce ve Türkçe",
+    "feature3": "Özel hesap ve bulut eşitleme"
   },
   "footer": {
-    "description": "Expensia - Kişisel gider takip uygulamanız",
-    "links": {
-      "privacy": "Gizlilik Politikası",
-      "terms": "Kullanım Koşulları",
-      "contact": "İletişim"
-    },
-    "copyright": "© 2025 Expensia. Tüm hakları saklıdır."
+    "description": "iPhone için kişisel gider takip uygulamanız.",
+    "linksTitle": "Bağlantılar",
+    "links": {"privacy": "Gizlilik Politikası", "terms": "Kullanım Koşulları", "contact": "İletişim"},
+    "copyright": "© 2026 Expensia. Tüm hakları saklıdır."
   }
 }
