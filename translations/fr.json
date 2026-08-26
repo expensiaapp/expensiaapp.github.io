@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "Expensia – Suivi des dépenses sur iPhone",
+    "description": "Suivez vos dépenses ponctuelles et récurrentes, comprenez vos habitudes, fixez des budgets, conservez vos reçus et exportez des rapports avec Expensia."
+  },
+  "aria": {
+    "primaryNavigation": "Navigation principale", "home": "Accueil d’Expensia", "language": "Langue", "toggleNavigation": "Afficher ou masquer la navigation",
+    "appStore": "Télécharger dans l’App Store", "useLightAppearance": "Utiliser l’apparence claire", "useDarkAppearance": "Utiliser l’apparence sombre"
+  },
+  "nav": {"home": "Accueil", "features": "Fonctionnalités", "plans": "Gratuit et Pro", "showcase": "Aperçu", "about": "À propos"},
+  "hero": {
+    "badge": "Suivi simple des dépenses sur iPhone", "title": "Découvrez où va votre argent",
+    "subtitle": "Suivez vos dépenses ponctuelles et récurrentes, repérez les tendances et gardez le contrôle sans faire de la gestion un travail de plus.",
+    "learnMore": "Découvrir les fonctionnalités"
+  },
+  "features": {
+    "label": "Fonctionnalités", "title": "Conçue pour les dépenses quotidiennes", "subtitle": "L’essentiel reste rapide, clair et à portée de main.",
+    "groups": {
+      "capture": {"title": "Saisissez sans effort", "description": "Enregistrez une dépense en quelques secondes et retrouvez-la facilement."},
+      "automate": {"title": "Automatisez les dépenses habituelles", "description": "Planifiez les dépenses récurrentes et gardez vos données à jour sur chaque iPhone connecté."},
+      "understand": {"title": "Comprenez votre mois", "description": "Consultez des tendances utiles et des limites facultatives par catégorie sans transformer le suivi en comptabilité."},
+      "keep": {"title": "Conservez l’essentiel", "description": "Joignez des reçus privés et exportez des données claires quand vous en avez besoin."}
+    },
+    "expenseEntry": {"title": "Saisie rapide", "description": "Nommez la dépense, choisissez l’une des neuf catégories, indiquez la date et enregistrez-la en quelques secondes."},
+    "recurring": {"title": "Dépenses récurrentes maîtrisées", "description": "Planifiez factures et abonnements, puis suspendez, reprenez, modifiez ou supprimez-les à tout moment."},
+    "insights": {"title": "Analyses claires", "description": "Consultez les totaux mensuels, les catégories, une tendance sur six mois et le mois choisi en un coup d’œil."},
+    "organize": {"title": "Retrouvez chaque dépense", "description": "Recherchez par nom et filtrez les dépenses ou récurrences par catégorie et date."},
+    "budgets": {"title": "Budgets mensuels par catégorie", "description": "Fixez des limites par catégorie et suivez la progression sans bloquer la saisie."},
+    "receipts": {"title": "Photos privées des reçus", "description": "Joignez une photo de l’appareil ou de la photothèque à une dépense ponctuelle ou générée."},
+    "export": {"title": "Export CSV et PDF", "description": "Emportez vos données de dépenses ou partagez un résumé clair d’une page."},
+    "sync": {"title": "Widgets et synchronisation cloud", "description": "Consultez les dépenses du mois depuis l’écran d’accueil et synchronisez vos iPhone connectés."}
+  },
+  "plans": {
+    "label": "Gratuit et Pro", "title": "Commencez gratuitement. Passez à Pro si utile.",
+    "subtitle": "Le suivi essentiel reste utile gratuitement ; Pro supprime les limites et débloque les outils avancés.",
+    "freeBadge": "Gratuit", "proBadge": "Pro",
+    "free": {
+      "title": "Suivi quotidien", "expenses": "10 dépenses saisies manuellement par mois", "recurring": "2 récurrences actives",
+      "generated": "Les dépenses récurrentes générées ne comptent pas dans la limite mensuelle", "included": "Tableau de bord, Analyses, widgets, catégories et synchronisation cloud"
+    },
+    "pro": {
+      "title": "Plus de contrôle, sans limites", "unlimited": "Dépenses et récurrences illimitées", "budgets": "Budgets mensuels par catégorie",
+      "receipts": "Photos privées des reçus", "export": "Export des données CSV et résumés PDF"
+    }
+  },
+  "showcase": {
+    "label": "Aperçu de l’app", "title": "Découvrez Expensia en action", "subtitle": "Écrans actuels de l’app en français.", "scrollHint": "Balayez pour explorer",
+    "dashboard": {"title": "Tableau de bord", "alt": "Tableau de bord Expensia affichant les dépenses mensuelles"},
+    "insights": {"title": "Analyses", "alt": "Graphiques d’analyse dans Expensia"},
+    "expenses": {"title": "Historique des dépenses", "alt": "Historique des dépenses consultable dans Expensia"},
+    "recurring": {"title": "Récurrences", "alt": "Récurrences de dépenses dans Expensia"},
+    "add": {"title": "Saisie rapide", "alt": "Ajout d’une dépense et d’un reçu dans Expensia"}
+  },
+  "about": {
+    "title": "Le suivi des dépenses sans superflu",
+    "description": "Expensia reste volontairement simple : dépenses ponctuelles, coûts récurrents et outils pour mieux les comprendre. Disponible en six langues sur iPhone.",
+    "feature1": "Suivi ponctuel et récurrent", "feature2": "Six langues", "feature3": "Compte privé et synchronisation cloud"
+  },
+  "footer": {
+    "description": "Votre suivi personnel des dépenses sur iPhone.", "linksTitle": "Liens",
+    "links": {"privacy": "Politique de confidentialité", "terms": "Conditions d’utilisation", "contact": "Contact"},
+    "copyright": "© 2026 Expensia. Tous droits réservés."
+  }
+}

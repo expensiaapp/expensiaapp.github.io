@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "title": "Expensia – Control de gastos para iPhone",
+    "description": "Registra gastos únicos y recurrentes, entiende tus hábitos, define presupuestos, guarda recibos y exporta informes con Expensia para iPhone."
+  },
+  "aria": {
+    "primaryNavigation": "Navegación principal",
+    "home": "Inicio de Expensia",
+    "language": "Idioma",
+    "toggleNavigation": "Mostrar u ocultar la navegación",
+    "appStore": "Descargar en el App Store",
+    "useLightAppearance": "Usar apariencia clara",
+    "useDarkAppearance": "Usar apariencia oscura"
+  },
+  "nav": {"home": "Inicio", "features": "Funciones", "plans": "Gratis y Pro", "showcase": "La app", "about": "Acerca de"},
+  "hero": {
+    "badge": "Control de gastos sencillo para iPhone",
+    "title": "Descubre adónde va tu dinero",
+    "subtitle": "Registra gastos únicos y recurrentes, detecta patrones y mantén el control sin convertir tus finanzas en otro trabajo.",
+    "learnMore": "Descubrir funciones"
+  },
+  "features": {
+    "label": "Funciones",
+    "title": "Pensada para los gastos del día a día",
+    "subtitle": "Todo lo importante se mantiene rápido, claro y al alcance.",
+    "groups": {
+      "capture": {"title": "Registra sin esfuerzo", "description": "Guarda un gasto en segundos y encuéntralo después sin rebuscar."},
+      "automate": {"title": "Automatiza los gastos habituales", "description": "Programa gastos recurrentes y consulta los datos actuales en cada iPhone donde hayas iniciado sesión."},
+      "understand": {"title": "Entiende cada mes", "description": "Consulta tendencias útiles y límites opcionales por categoría sin convertir el control en contabilidad."},
+      "keep": {"title": "Conserva lo importante", "description": "Adjunta recibos privados y exporta registros claros cuando los necesites."}
+    },
+    "expenseEntry": {"title": "Registro rápido", "description": "Pon nombre al gasto, elige una de nueve categorías, define la fecha y guárdalo en segundos."},
+    "recurring": {"title": "Gastos recurrentes, resueltos", "description": "Programa facturas y suscripciones; pausa, reanuda, edita o elimina cuando quieras."},
+    "insights": {"title": "Análisis claros", "description": "Consulta totales mensuales, categorías, una tendencia de seis meses y cualquier mes de un vistazo."},
+    "organize": {"title": "Encuentra cualquier gasto", "description": "Busca nombres y filtra cargos o programaciones recurrentes por categoría y fecha."},
+    "budgets": {"title": "Presupuestos mensuales por categoría", "description": "Define límites por categoría y sigue el progreso sin impedir que registres gastos."},
+    "receipts": {"title": "Fotos privadas de recibos", "description": "Adjunta una foto de la cámara o fototeca a un gasto único o generado."},
+    "export": {"title": "Exportación CSV y PDF", "description": "Lleva contigo los datos de gastos o comparte un resumen claro de una página."},
+    "sync": {"title": "Widgets y sincronización en la nube", "description": "Consulta el gasto del mes desde la pantalla de inicio y sincroniza tus iPhone."
+    }
+  },
+  "plans": {
+    "label": "Gratis y Pro", "title": "Empieza gratis. Mejora cuando te convenga.",
+    "subtitle": "El control básico sigue siendo útil gratis; Pro elimina límites y desbloquea herramientas avanzadas.",
+    "freeBadge": "Gratis", "proBadge": "Pro",
+    "free": {
+      "title": "Control diario", "expenses": "10 gastos introducidos manualmente al mes", "recurring": "2 programaciones recurrentes activas",
+      "generated": "Los cargos recurrentes generados no consumen el límite mensual", "included": "Panel, Análisis, widgets, categorías y sincronización en la nube"
+    },
+    "pro": {
+      "title": "Más control, sin límites", "unlimited": "Gastos y programaciones recurrentes ilimitados", "budgets": "Presupuestos mensuales por categoría",
+      "receipts": "Fotos privadas de recibos", "export": "Exportación CSV y resúmenes PDF"
+    }
+  },
+  "showcase": {
+    "label": "La app", "title": "Descubre Expensia en acción", "subtitle": "Pantallas actuales de Expensia en español.", "scrollHint": "Desliza para explorar",
+    "dashboard": {"title": "Panel", "alt": "Panel de Expensia con los gastos mensuales"},
+    "insights": {"title": "Análisis", "alt": "Gráficos de análisis de Expensia"},
+    "expenses": {"title": "Historial de gastos", "alt": "Historial de gastos de Expensia con búsqueda"},
+    "recurring": {"title": "Programaciones recurrentes", "alt": "Programaciones de gastos recurrentes en Expensia"},
+    "add": {"title": "Registro rápido", "alt": "Registro de un gasto y un recibo en Expensia"}
+  },
+  "about": {
+    "title": "Control de gastos sin complicaciones",
+    "description": "Expensia es pequeña a propósito: gastos únicos, gastos recurrentes y las herramientas que facilitan entenderlos. Disponible en seis idiomas para iPhone.",
+    "feature1": "Control único y recurrente", "feature2": "Seis idiomas", "feature3": "Cuenta privada y sincronización en la nube"
+  },
+  "footer": {
+    "description": "Tu control personal de gastos para iPhone.", "linksTitle": "Enlaces",
+    "links": {"privacy": "Política de privacidad", "terms": "Términos del servicio", "contact": "Contacto"},
+    "copyright": "© 2026 Expensia. Todos los derechos reservados."
+  }
+}

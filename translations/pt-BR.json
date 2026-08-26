@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "Expensia – Controle de despesas para iPhone",
+    "description": "Controle despesas únicas e recorrentes, entenda seus gastos, defina orçamentos, guarde comprovantes e exporte relatórios com o Expensia para iPhone."
+  },
+  "aria": {
+    "primaryNavigation": "Navegação principal", "home": "Início do Expensia", "language": "Idioma", "toggleNavigation": "Mostrar ou ocultar navegação",
+    "appStore": "Baixar na App Store", "useLightAppearance": "Usar aparência clara", "useDarkAppearance": "Usar aparência escura"
+  },
+  "nav": {"home": "Início", "features": "Recursos", "plans": "Grátis e Pro", "showcase": "O app", "about": "Sobre"},
+  "hero": {
+    "badge": "Controle simples de despesas para iPhone", "title": "Veja para onde vai seu dinheiro",
+    "subtitle": "Controle despesas únicas e recorrentes, identifique padrões e mantenha tudo sob controle sem transformar suas finanças em outro trabalho.",
+    "learnMore": "Conhecer os recursos"
+  },
+  "features": {
+    "label": "Recursos", "title": "Feito para as despesas do dia a dia", "subtitle": "Tudo que importa continua rápido, claro e ao seu alcance.",
+    "groups": {
+      "capture": {"title": "Registre sem esforço", "description": "Salve uma despesa em segundos e encontre-a depois sem complicação."},
+      "automate": {"title": "Automatize os gastos de rotina", "description": "Programe despesas recorrentes e mantenha os dados atuais em cada iPhone conectado."},
+      "understand": {"title": "Entenda o mês", "description": "Veja tendências úteis e limites opcionais por categoria sem transformar o controle em contabilidade."},
+      "keep": {"title": "Guarde o que importa", "description": "Anexe comprovantes privados e exporte registros claros quando precisar."}
+    },
+    "expenseEntry": {"title": "Registro rápido", "description": "Dê um nome, escolha uma das nove categorias, informe a data e salve a despesa em segundos."},
+    "recurring": {"title": "Despesas recorrentes sob controle", "description": "Programe contas e assinaturas; pause, retome, edite ou exclua quando quiser."},
+    "insights": {"title": "Análises claras", "description": "Veja totais mensais, categorias, uma tendência de seis meses e o mês selecionado rapidamente."},
+    "organize": {"title": "Encontre qualquer despesa", "description": "Pesquise nomes e filtre despesas ou recorrências por categoria e data."},
+    "budgets": {"title": "Orçamentos mensais por categoria", "description": "Defina limites por categoria e acompanhe o progresso sem bloquear novos registros."},
+    "receipts": {"title": "Fotos privadas de comprovantes", "description": "Anexe uma foto da câmera ou biblioteca a uma despesa única ou gerada."},
+    "export": {"title": "Exportação CSV e PDF", "description": "Leve os dados das suas despesas ou compartilhe um resumo claro de uma página."},
+    "sync": {"title": "Widgets e sincronização na nuvem", "description": "Veja os gastos do mês na Tela de Início e mantenha seus iPhones conectados sincronizados."}
+  },
+  "plans": {
+    "label": "Grátis e Pro", "title": "Comece grátis. Assine quando fizer sentido.",
+    "subtitle": "O controle principal continua útil de graça; o Pro remove limites e libera ferramentas avançadas.",
+    "freeBadge": "Grátis", "proBadge": "Pro",
+    "free": {
+      "title": "Controle diário", "expenses": "10 despesas inseridas manualmente por mês", "recurring": "2 recorrências ativas",
+      "generated": "Despesas recorrentes geradas não usam o limite mensal", "included": "Painel, Análises, widgets, categorias e sincronização na nuvem"
+    },
+    "pro": {
+      "title": "Mais controle, sem limites", "unlimited": "Despesas e recorrências ilimitadas", "budgets": "Orçamentos mensais por categoria",
+      "receipts": "Fotos privadas de comprovantes", "export": "Exportação de dados CSV e resumos em PDF"
+    }
+  },
+  "showcase": {
+    "label": "O app", "title": "Veja o Expensia em ação", "subtitle": "Telas atuais do app em português do Brasil.", "scrollHint": "Deslize para explorar",
+    "dashboard": {"title": "Painel", "alt": "Painel do Expensia mostrando os gastos mensais"},
+    "insights": {"title": "Análises", "alt": "Gráficos de análise do Expensia"},
+    "expenses": {"title": "Histórico de despesas", "alt": "Histórico pesquisável de despesas no Expensia"},
+    "recurring": {"title": "Recorrências", "alt": "Despesas recorrentes programadas no Expensia"},
+    "add": {"title": "Registro rápido", "alt": "Adição de uma despesa e um comprovante no Expensia"}
+  },
+  "about": {
+    "title": "Controle de despesas sem complicação",
+    "description": "O Expensia é pequeno de propósito: despesas únicas, gastos recorrentes e as ferramentas que ajudam você a entender os dois. Disponível em seis idiomas para iPhone.",
+    "feature1": "Controle único e recorrente", "feature2": "Seis idiomas", "feature3": "Conta privada e sincronização na nuvem"
+  },
+  "footer": {
+    "description": "Seu controle pessoal de despesas para iPhone.", "linksTitle": "Links",
+    "links": {"privacy": "Política de Privacidade", "terms": "Termos de Serviço", "contact": "Contato"},
+    "copyright": "© 2026 Expensia. Todos os direitos reservados."
+  }
+}

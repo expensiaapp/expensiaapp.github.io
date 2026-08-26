@@ -1,4 +1,4 @@
-const languages = ['en', 'tr'];
+const languages = ['en', 'tr', 'es', 'de', 'fr', 'pt-BR'];
 const translationCache = new Map();
 const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -23,7 +23,8 @@ const isLegalPage = document.body.classList.contains('legal-page');
 let currentLanguage = isLegalPage
     ? document.documentElement.lang
     : storedValue('language', languages)
-        || (navigator.language.toLowerCase().startsWith('tr') ? 'tr' : 'en');
+        || languages.find(language => navigator.language.toLowerCase().startsWith(language.toLowerCase()))
+        || 'en';
 let currentTheme = storedValue('theme', ['light', 'dark'])
     || (darkMode.matches ? 'dark' : 'light');
 let languageRequest = 0;
@@ -125,11 +126,17 @@ async function setLanguage(language, persist = true) {
 }
 
 function updateThemeControls() {
-    const useLight = currentLanguage === 'tr' ? 'Açık görünümü kullan' : 'Use light appearance';
-    const useDark = currentLanguage === 'tr' ? 'Koyu görünümü kullan' : 'Use dark appearance';
+    const labels = {
+        en: ['Use light appearance', 'Use dark appearance'],
+        tr: ['Açık görünümü kullan', 'Koyu görünümü kullan'],
+        es: ['Usar apariencia clara', 'Usar apariencia oscura'],
+        de: ['Helles Erscheinungsbild verwenden', 'Dunkles Erscheinungsbild verwenden'],
+        fr: ['Utiliser l’apparence claire', 'Utiliser l’apparence sombre'],
+        'pt-BR': ['Usar aparência clara', 'Usar aparência escura']
+    }[currentLanguage] || ['Use light appearance', 'Use dark appearance'];
 
     document.querySelectorAll('[data-theme-toggle]').forEach(button => {
-        button.setAttribute('aria-label', currentTheme === 'dark' ? useLight : useDark);
+        button.setAttribute('aria-label', currentTheme === 'dark' ? labels[0] : labels[1]);
         button.querySelector('.theme-symbol').textContent = currentTheme === 'dark' ? '☀︎' : '☾';
     });
 }
@@ -191,6 +198,10 @@ function initReveals() {
 
 document.querySelectorAll('[data-language]').forEach(button => {
     button.addEventListener('click', () => setLanguage(button.dataset.language));
+});
+
+document.querySelectorAll('[data-legal-language]').forEach(select => {
+    select.addEventListener('change', () => window.location.assign(select.value));
 });
 
 document.querySelectorAll('[data-theme-toggle]').forEach(button => {

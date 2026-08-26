@@ -186,6 +186,16 @@ button:focus-visible {
     cursor: pointer;
 }
 
+.legal-language {
+    min-height: 44px;
+    padding: 0 32px 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--text-primary);
+    background: var(--surface);
+    font: inherit;
+}
+
 .language-control button {
     position: relative;
     border-radius: 10px;

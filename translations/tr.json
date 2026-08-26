@@ -8,7 +8,9 @@
     "home": "Expensia ana sayfası",
     "language": "Dil",
     "toggleNavigation": "Gezinmeyi aç veya kapat",
-    "appStore": "App Store’dan indirin"
+    "appStore": "App Store’dan indirin",
+    "useLightAppearance": "Açık görünümü kullan",
+    "useDarkAppearance": "Koyu görünümü kullan"
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -66,7 +68,7 @@
   "showcase": {
     "label": "Uygulama galerisi",
     "title": "Expensia’yı çalışırken görün",
-    "subtitle": "İngilizce ve Türkçe uygulamanın güncel ekranları.",
+    "subtitle": "Uygulamanın altı dilde güncel ekranları.",
     "scrollHint": "Keşfetmek için kaydırın",
     "dashboard": {"title": "Dashboard", "alt": "Aylık harcamayı gösteren Expensia Dashboard ekranı"},
     "insights": {"title": "Analizler", "alt": "Expensia harcama grafikleri"},
@@ -76,9 +78,9 @@
   },
   "about": {
     "title": "Karmaşa olmadan gider takibi",
-    "description": "Expensia bilerek küçük tutuldu: tek seferlik giderler, tekrarlayan ödemeler ve ikisini de anlamayı kolaylaştıran araçlar. iPhone’da İngilizce ve Türkçe kullanılabilir.",
+    "description": "Expensia bilerek küçük tutuldu: tek seferlik giderler, tekrarlayan ödemeler ve ikisini de anlamayı kolaylaştıran araçlar. iPhone’da altı dilde kullanılabilir.",
     "feature1": "Tek seferlik ve tekrarlayan gider takibi",
-    "feature2": "İngilizce ve Türkçe",
+    "feature2": "Altı dil",
     "feature3": "Özel hesap ve bulut eşitleme"
   },
   "footer": {

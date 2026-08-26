@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "title": "Expensia – Ausgabenverwaltung für iPhone",
+    "description": "Erfasse einmalige und wiederkehrende Ausgaben, erkenne Muster, lege Budgets fest, sichere Belege und exportiere Berichte mit Expensia für iPhone."
+  },
+  "aria": {
+    "primaryNavigation": "Hauptnavigation", "home": "Expensia-Startseite", "language": "Sprache", "toggleNavigation": "Navigation ein- oder ausblenden",
+    "appStore": "Im App Store laden", "useLightAppearance": "Helles Erscheinungsbild verwenden", "useDarkAppearance": "Dunkles Erscheinungsbild verwenden"
+  },
+  "nav": {"home": "Start", "features": "Funktionen", "plans": "Kostenlos & Pro", "showcase": "App-Einblick", "about": "Über uns"},
+  "hero": {
+    "badge": "Einfache Ausgabenverwaltung für iPhone", "title": "Sieh, wohin dein Geld fließt",
+    "subtitle": "Erfasse einmalige und wiederkehrende Ausgaben, erkenne Muster und behalte die Kontrolle, ohne dass Geldverwaltung zum Nebenjob wird.",
+    "learnMore": "Funktionen entdecken"
+  },
+  "features": {
+    "label": "Funktionen", "title": "Für alltägliche Ausgaben gemacht", "subtitle": "Alles Wichtige bleibt schnell, klar und griffbereit.",
+    "groups": {
+      "capture": {"title": "Mühelos erfassen", "description": "Speichere Ausgaben in Sekunden und finde sie später ohne Suchen wieder."},
+      "automate": {"title": "Routinekosten automatisch erfassen", "description": "Plane wiederkehrende Kosten und halte deine Daten auf jedem angemeldeten iPhone aktuell."},
+      "understand": {"title": "Den Monat verstehen", "description": "Erkenne nützliche Trends und optionale Kategorielimits, ohne aus der Erfassung eine Buchhaltung zu machen."},
+      "keep": {"title": "Wichtiges aufbewahren", "description": "Hänge private Belege an und exportiere übersichtliche Daten, wenn du sie brauchst."}
+    },
+    "expenseEntry": {"title": "Schnelle Erfassung", "description": "Benenne die Ausgabe, wähle eine von neun Kategorien und ein Datum und speichere sie in Sekunden."},
+    "recurring": {"title": "Wiederkehrende Kosten im Griff", "description": "Plane Rechnungen und Abos und pausiere, reaktiviere, bearbeite oder lösche sie jederzeit."},
+    "insights": {"title": "Klare Ausgabenanalysen", "description": "Sieh Monatssummen, Kategorien, einen Sechsmonatstrend und einen gewählten Monat auf einen Blick."},
+    "organize": {"title": "Jede Ausgabe schnell finden", "description": "Suche nach Namen und filtere Ausgaben oder wiederkehrende Pläne nach Kategorie und Datum."},
+    "budgets": {"title": "Monatliche Kategoriebudgets", "description": "Lege Kategorielimits fest und verfolge den Fortschritt, ohne die Erfassung zu blockieren."},
+    "receipts": {"title": "Private Belegfotos", "description": "Hänge ein Kamera- oder Mediathekfoto an eine einmalige oder automatisch erzeugte Ausgabe an."},
+    "export": {"title": "CSV- und PDF-Export", "description": "Nimm deine Ausgabendaten mit oder teile eine übersichtliche einseitige Zusammenfassung."},
+    "sync": {"title": "Widgets und Cloud-Synchronisierung", "description": "Sieh die Ausgaben des laufenden Monats auf dem Home-Bildschirm und halte angemeldete iPhones synchron."}
+  },
+  "plans": {
+    "label": "Kostenlos & Pro", "title": "Kostenlos starten. Bei Bedarf upgraden.",
+    "subtitle": "Die wichtigsten Funktionen bleiben kostenlos; Pro entfernt Limits und schaltet erweiterte Werkzeuge frei.",
+    "freeBadge": "Kostenlos", "proBadge": "Pro",
+    "free": {
+      "title": "Ausgaben im Alltag", "expenses": "10 manuell erfasste Ausgaben pro Monat", "recurring": "2 aktive wiederkehrende Pläne",
+      "generated": "Automatisch erzeugte Ausgaben zählen nicht zum Monatslimit", "included": "Übersicht, Analysen, Widgets, Kategorien und Cloud-Synchronisierung"
+    },
+    "pro": {
+      "title": "Mehr Kontrolle, keine Limits", "unlimited": "Unbegrenzte Ausgaben und wiederkehrende Pläne", "budgets": "Monatliche Kategoriebudgets",
+      "receipts": "Private Belegfotos", "export": "CSV-Datenexport und PDF-Zusammenfassungen"
+    }
+  },
+  "showcase": {
+    "label": "App-Einblick", "title": "Expensia in Aktion", "subtitle": "Aktuelle Ansichten der deutschen App.", "scrollHint": "Wischen zum Entdecken",
+    "dashboard": {"title": "Übersicht", "alt": "Expensia-Übersicht mit monatlichen Ausgaben"},
+    "insights": {"title": "Analysen", "alt": "Analysediagramme in Expensia"},
+    "expenses": {"title": "Ausgabenverlauf", "alt": "Durchsuchbarer Ausgabenverlauf in Expensia"},
+    "recurring": {"title": "Wiederkehrende Pläne", "alt": "Wiederkehrende Ausgabenpläne in Expensia"},
+    "add": {"title": "Schnelle Erfassung", "alt": "Eine Ausgabe mit Beleg in Expensia erfassen"}
+  },
+  "about": {
+    "title": "Ausgabenverwaltung ohne Ballast",
+    "description": "Expensia bleibt bewusst klein: einmalige Ausgaben, wiederkehrende Kosten und Werkzeuge, die beides verständlicher machen. In sechs Sprachen für iPhone verfügbar.",
+    "feature1": "Einmalige und wiederkehrende Erfassung", "feature2": "Sechs Sprachen", "feature3": "Privates Konto und Cloud-Synchronisierung"
+  },
+  "footer": {
+    "description": "Deine persönliche Ausgabenverwaltung für iPhone.", "linksTitle": "Links",
+    "links": {"privacy": "Datenschutzerklärung", "terms": "Nutzungsbedingungen", "contact": "Kontakt"},
+    "copyright": "© 2026 Expensia. Alle Rechte vorbehalten."
+  }
+}
